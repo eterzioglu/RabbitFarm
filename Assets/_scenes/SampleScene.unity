@@ -136,9 +136,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1398082331}
     - target: {fileID: 920018717301253861, guid: 70826d77c6fdf0546a3367d0f2ec3287, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: _cameraController
+      value: 
+      objectReference: {fileID: 963194230}
     - target: {fileID: 3738224984621342848, guid: 70826d77c6fdf0546a3367d0f2ec3287, type: 3}
       propertyPath: m_Controller
       value: 
@@ -421,6 +421,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -631,6 +632,18 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7662f3019a31f41a3d0c015073a5fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1398082331 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3738224984621342848, guid: 70826d77c6fdf0546a3367d0f2ec3287, type: 3}

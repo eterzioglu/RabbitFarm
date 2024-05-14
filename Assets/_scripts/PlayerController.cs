@@ -8,9 +8,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Animator _animator;
     [SerializeField]
+    private CameraController _cameraController;
+    [SerializeField]
     private float _moveSpeed = 5f;
+
+    private void Start()
+    {
+        _cameraController.SetOffset(transform);
+    }
     
-    void Update()
+    private void Update()
     {
         PlayerMovement();
     }
@@ -22,6 +29,7 @@ public class PlayerController : MonoBehaviour
         if (moveDirection != Vector3.zero)
         {
             _animator.SetTrigger("walk");
+            _cameraController.FollowTarget(transform);
             RotatePlayer(moveDirection);
             MovePlayer(moveDirection);
         }
